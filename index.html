@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <title>Vue Practice </title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <h1>Vue is Awesome!</h1>
+  <main id="app">
+    <h3>{{ welcomeMessage }}</h3>
+
+    <ul>
+      <li v-for='fruit in goodFruits'>
+        <p @click='logFruits'>{{ fruit.name }} is {{ fruit.flavour }}</p>
+      </li>
+    </ul>
+<a v-bind:href="targetURL" target="_blank" :class="{ 'no-decorate' : anchorOff}">
+    Go to the Vue documentation
+</a>
+
+<p v-if="hazVue">
+    {{ anothermessage }}
+</p>
+
+<button @click='hideMsg()'>Hide above text</button>
+
+<footer id="footer">
+  <h4> {{ footermessage }}</h4>
+</footer>
+  
+</main>
+
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
